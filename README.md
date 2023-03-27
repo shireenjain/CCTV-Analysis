@@ -1,23 +1,10 @@
-# Psychic-CCTV 
+# CCTV-Footage Analysis
 
-## Our Motivation :sunglasses:
+## Our Motivation 
 
-Recently, one of our team members, [@abhijitramesh](https://github.com/abhijitramesh) has his bicycle stolen :motor_scooter:. He had gone shopping, parked his bicycle outside the store,
-and by the time he returned his bicyle was missing :no_bicycles:. Gathering his wits, Abhijit looked around and saw a CCTV camera of the store which would have caught
-the footage of the theft. So he went in and requested the store owners to let him see the footage :video_camera:. The footage was there, but it's resolution was not good enough 
-for Abhijit to get any useful information. 
+CCTV feeds are oftentimes not very useful. This CCTV Footage Analysis model aims to use image processing and deep learning to capture data from real-time CCTV footage. By using Blockchain, Cloud Computing and IoT, analysis can be drawn on this data.
 
-So Abhijit returned home, walking :walking:, thinking :thinking: that CCTV feeds are basically not very useful. Being a computer science student working with image processing, 
-computer vision and deep learning, an idea struck him :bulb:. He called two of his other friends and laid down his plan so that the CCTV feeds like those could 
-actually serve some purpose. 
-
-And that idea, led to us building Psychic CCTY, a tool to make use of videos from CCTV feeds, as well as other kinds of videos, captured by people at a crime scene :information_source:.
-
-***Based on a true story***
-
-## What does Psychic CCTV do? :grey_question:
-
-Psychich CCTV will help you analyse a video using the following methods:
+Our model will help you analyse a video using the following methods:
 
 - You have a video(even a low resolution one), and you're sure you might find some object of interest in the video, but you're too busy to sit and watch the entire
 video. Even if you sit and watch the video, you might skip something by mistake, becuase after all, you're human. So we have provided an option to perform object detection
@@ -26,13 +13,12 @@ on the entire video, in real time which stores all frames with objects of intere
 - Now, you did get an object of interest, but since you're not a computer, you still feel it could have a higher resolution. So used those saved frames and increase their 
 resolution using our super-resolution technique. It works almost in real time, taking just 4-6 seconds to perform the operation on frame. 
 
-- You already have a few images you want to analyse. Select them and run the super resolution on your own custom images :framed_picture:. 
+- You already have a few images you want to analyse. Select them and run the super resolution on your own custom images.
+- And finally, you might have a video recording with sound in it too. Now there's a lot of interference in the background, a lot of sound sources. So, select the video
+and our model will extract the audio and split in into sources so you can clearly hear the vocals and well as the background noise separately and gather useful information
+from it.
 
-- And finally, you might have a video recording with sound in it too. Now there's a lot of interference in the background, a lot of sound sources :sound:. So, select the video
-and Psychich CCTV will extract the audio and split in into sources so you can clearly hear the vocals :speaking_head: and well as the background noise separately and gather useful information
-from it :loudspeaker:.
-
-## How does Psychic CCTV work? :thought_balloon:
+## How does this model work? 
 
 ### Super Resolution
 
