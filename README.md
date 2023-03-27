@@ -74,8 +74,7 @@ to find some useful information from the CCTV feed and would still have his bicy
 
 ### Object Detection
 
-Abhijit just needed the super resolution technique to have a fix to his problem, but since we started out with the project, we decided to expand the functionality
-a bit. We added an option to detect objects in video feeds as well. For this, we have used YOLO Object Detection, again implemented from scratch in ***PyTorch***.
+Since we started out with the project, we decided to expand the functionality a bit. We added an option to detect objects in video feeds as well. For this, we have used YOLO Object Detection, again implemented from scratch in ***PyTorch***.
 
 - [YOLO Model](https://github.com/Fireboltz/Psychic-CCTV/blob/master/yoloModel/yolov3.weights)
 - [YOLO Training Scripts](https://github.com/Fireboltz/Psychic-CCTV/tree/master/yolo_train)
@@ -86,46 +85,12 @@ A few sample outputs that we ran on a video:
 |---|---|---|
 | ![4](./inference/Objects/tvmonitor7_5.jpg) | ![5](./inference/Objects/tvmonitor10_2.jpg) | ![6](./inference/Objects/person16_0.jpg) |
 
-This feed detected monitors that weren't even turned on as were not in the focus on the camera. It detected a person as well whose back was turned. The method used will
-automatically detect objects in a video feed and save all frames in which a new object might be detected. This will make it easier for a person to go through
+This feed detected monitors that weren't even turned on as were not in the focus on the camera. It detected a person as well whose back was turned. The method used will automatically detect objects in a video feed and save all frames in which a new object might be detected. This will make it easier for a person to go through
 objects of interest that might be present in a video feed without sitting and wathcing the entire feed themselves. 
 
 ### Separating Soundtracks
 
-In videos that might be recorded at crime scenes such as accidents, hit and run cases, snatch thefts on roads, etc sound tracks play a very important role in addition to 
-the video. Mostly when such a thing happens, someone or the other will end up recording a video on their phones. Now this video might be blurry, unstable, not of a high 
-quality and all this is handled by our above mentioned steps, but at the same time the audio might also not be clear. If audio could be split into vocals and other
-categories, it would be much easier to understand what happened. The sound of the car going away in a hit and run case in which the car directly isn't very visible 
-would help in determining the model and make of the car. On the spot, people might exclaim and say some important visual details regarding a crime, but without the authorities
-being present. More such things can be caught on video. In order to improve the process of analysing the audio, we extract the audio from a given video and 
-split it into vocal and non-vocal using deep learning models. 
+In videos that might be recorded at crime scenes such as accidents, hit and run cases, snatch thefts on roads, etc sound tracks play a very important role in addition to the video. Mostly when such a thing happens, someone or the other will end up recording a video on their phones. Now this video might be blurry, unstable, not of a high quality and all this is handled by our above mentioned steps, but at the same time the audio might also not be clear. If audio could be split into vocals and other categories, it would be much easier to understand what happened. The sound of the car going away in a hit and run case in which the car directly isn't very visible would help in determining the model and make of the car. On the spot, people might exclaim and say some important visual details regarding a crime, but without the authorities being present. More such things can be caught on video. In order to improve the process of analysing the audio, we extract the audio from a given video and split it into vocal and non-vocal using deep learning models. 
 
-## How accessible is the tool? :roller_coaster:
 
-Now all of this work has been done in python. But an officer who might be going through these videos might not be experinced enough in python to install alll the packages
-and libraries needed and then run the code. 
-
-So, we developed a desktop app while provides all the needed functionality in a GUI format. Our GUI is made using PySimpleGUIQt. This makes the application 
-windows resize automatically, the appearence does not depend on the screen resolution. 
-
-In order to simplify the process even more, we can provide packages for every OS, Windows, Linux and MacOS by packaging the entire application using PyInstaller. That 
-way an initial set up using a requirements.txt is also not required. 
-
-Screenshots of the application: 
-
-| ![Screenshot_20200825_190901](https://user-images.githubusercontent.com/41234408/91181804-000f2000-e707-11ea-8c60-aab43d340893.png) | ![Screenshot_20200825_190941](https://user-images.githubusercontent.com/41234408/91181836-09988800-e707-11ea-82e9-79fa75787327.png)  |
-|---|---|
-| Object Detection Screen  | Dialog to allow user to choose the video to analyse  |
-
-| ![Screenshot_20200825_190958](https://user-images.githubusercontent.com/41234408/91181860-10bf9600-e707-11ea-9710-2253443e1b18.png) | ![Screenshot_20200825_191034](https://user-images.githubusercontent.com/41234408/91181880-174e0d80-e707-11ea-9a19-d2c1b7c59038.png)  |
-|---|---|
-| Sound Extraction  | Frames with objects of interest displayed along with the option to perform super resolution  |
-
-## Running the Project
-
-To run the project, just execute the psychichCCTY.py script. Rest of the files were the ones used to do the intial groundwork of training models and getting them ready by testing them. 
-
-```
-python psychichCCTV.py
-```
 
