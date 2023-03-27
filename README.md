@@ -129,10 +129,3 @@ To run the project, just execute the psychichCCTY.py script. Rest of the files w
 python psychichCCTV.py
 ```
 
-## Project Creators: :mortar_board:
-
-[Vishwaak Chandaran](https://github.com/Vishwaak)
-
-[Abhijit Ramesh](https://github.com/abhijitramesh)
-
-[Yash Khare](https://github.com/yashk2000)
